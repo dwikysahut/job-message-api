@@ -1,10 +1,10 @@
 const jobModels = require('../models/jobModel')
 const authModels = require('../models/authModel')
+// const kue = require('kue');
+// const queue = kue.createQueue();
 const { Op } = require("sequelize");
 const helper = require('../helpers')
 const e = require('express')
-// const { delete } = require('../../app')
-
 require('dotenv').config()
 const refreshTokens = []
 module.exports = {
@@ -68,6 +68,15 @@ module.exports = {
                         console.log('no more job')
                     }
                     result.user_id = user.id;
+                    // const job = queue.create('job', {result})
+                    //   job.on('failed', (err) => {
+                    //     console.log(err) //nilai kembalian error akan dipassing disini.
+                    //   })
+                    //   job.on('complete', (result) => {
+                    //     console.log(result) //nilai kembalian jika sukses akan dipassing disini.
+                    //   })
+                    //   job.save()
+                    //    return res.json('Wait the queue please :)')
                     return helper.response(response, 200, result)
                 } catch (error) {
                     // if data has reach end, then clear user_id on job for reset mark.
