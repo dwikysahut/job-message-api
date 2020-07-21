@@ -1,4 +1,4 @@
-# Astro Library App
+# Job Board API
 Job Board api was a RESTfull API built with Node.js using the Express.js Framework. also Sequelize js  [Explore More Sequelize.js](https://sequelize.org/). and then Express.js is one of the popular web frameworks in the Node.js .  [Explore More Express.js](https://en.wikipedia.org/wiki/Express.js). This RESTful API was tested using mocha and chai and istanbul code coverage
 
 ## Built With
