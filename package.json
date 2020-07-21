@@ -1,0 +1,43 @@
+{
+  "name": "job-board-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "mocha test/ --recursive --exit",
+    "coverage": "nyc --reporter=lcov --reporter=text-lcov yarn test",
+    "cover": "nyc mocha test/ --recursive --exit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.0",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.3"
+  },
+  "nyc": {
+    "all": true,
+    "include": [
+        "src/**/*.js"
+    ],
+    "reporter": [
+        "text",
+        "text-summary"
+    ]
+},
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.0.1",
+    "nyc": "^15.1.0"
+  }
+}
