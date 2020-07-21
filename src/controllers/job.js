@@ -6,7 +6,6 @@ const { Op } = require("sequelize");
 const helper = require('../helpers')
 const e = require('express')
 require('dotenv').config()
-const refreshTokens = []
 module.exports = {
 
     getJobs: async function (request, response) {
